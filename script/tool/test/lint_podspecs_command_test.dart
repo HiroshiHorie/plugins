@@ -1,3 +1,7 @@
+// Copyright 2013 The Flutter Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
 import 'dart:io';
 
 import 'package:args/command_runner.dart';
@@ -82,6 +86,7 @@ void main() {
                 'lint',
                 p.join(plugin1Dir.path, 'ios', 'plugin1.podspec'),
                 '--configuration=Debug',
+                '--skip-tests',
                 '--use-libraries'
               ],
               mockPackagesDir.path),
@@ -92,6 +97,7 @@ void main() {
                 'lint',
                 p.join(plugin1Dir.path, 'ios', 'plugin1.podspec'),
                 '--configuration=Debug',
+                '--skip-tests',
               ],
               mockPackagesDir.path),
         ]),
@@ -141,6 +147,7 @@ void main() {
                 'lint',
                 p.join(plugin1Dir.path, 'plugin1.podspec'),
                 '--configuration=Debug',
+                '--skip-tests',
                 '--allow-warnings',
                 '--use-libraries'
               ],
@@ -152,6 +159,7 @@ void main() {
                 'lint',
                 p.join(plugin1Dir.path, 'plugin1.podspec'),
                 '--configuration=Debug',
+                '--skip-tests',
                 '--allow-warnings',
               ],
               mockPackagesDir.path),
